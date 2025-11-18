@@ -1,6 +1,6 @@
 # 🚀 Portfólio de Desenvolvedor Front-end
 
-### Por: [Seu Nome Completo]
+### Por: João Gabriel da silva
 
 ---
 
