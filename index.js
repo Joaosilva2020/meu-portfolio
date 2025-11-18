@@ -1,27 +1,27 @@
-document.getElementById('enviar-whatsapp').addEventListener('click', enviarWhatsApp);
 
-function enviarWhatsApp() {
-    // 1. **SEU NÚMERO REAL**
-    const meuNumero = '5565993307137' ; // SUBSTITUA AQUI
 
-    // 2. Coleta os dados (AGORA SÓ NOME E MENSAGEM)
+const enviarWhatsApp = () => {
+    // 
+    const meuNumero = '5565993307137'; 
+
+    // 1. 
     const nome = document.getElementById('nome-contato').value;
-    // const email = document.getElementById('email-contato').value; // REMOVIDO!
-    const mensagem = document.getElementById('mensagem-texto').value;
+    const mensagemTexto = document.getElementById('mensagem-texto').value;
+    
+    // 2. 
+    const mensagemLimpa = mensagemTexto.replace(/(\r\n|\n|\r)/gm, ' '); 
 
-    // 3. Validação
-    if (nome.trim() === '' || mensagem.trim() === '') {
-        alert('Por favor, preencha seu nome e a mensagem antes de enviar.');
-        return; 
-    }
+    // 3. Montar a mensagem completa
+    const mensagemCompleta = `Olá, meu nome é ${nome}.Quero falar sobre:${mensagemLimpa}`;
 
-    // 4. Monta o texto da mensagem (AGORA SEM O E-MAIL)
-    const mensagemPadrao = `Olá, meu nome é ${nome}.%0A%0AQuero falar sobre:%0A${mensagem}`;
+    // 4. Codificar a URL da mensagem
+    const mensagemCodificada = encodeURIComponent(mensagemCompleta);
 
-    // 5. Codifica e Constrói a URL
-    const textoCodificado = encodeURIComponent(mensagemPadrao);
-    const urlWhatsApp = `https://wa.me/${meuNumero}?text=${textoCodificado}`;
+    // 5. Montar e abrir a URL final
+    const url = `https://wa.me/${meuNumero}?text=${mensagemCodificada}`;
 
-    // 6. Abre o link
-    window.open(urlWhatsApp, '_blank');
-}
+    window.open(url, '_blank');
+};
+
+//6
+document.getElementById('enviar-whatsapp').addEventListener('click', enviarWhatsApp);
