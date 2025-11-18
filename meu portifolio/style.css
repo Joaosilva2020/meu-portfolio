@@ -1,0 +1,136 @@
+
+
+/* Configurações Globais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+    font-family: 'Arial', sans-serif; /* Fonte padrão, substitua por Google Fonts se desejar */
+}
+
+:root {
+    --cor-principal: #007bff; /* Azul primário */
+    --cor-secundaria: #343a40; /* Preto/Cinza Escuro para texto */
+    --cor-fundo: #f8f9fa; /* Cinza claro para fundo */
+    --cor-branco: #ffffff;
+    --cor-hover: #0056b3; /* Azul mais escuro para hover */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    line-height: 1.6;
+}
+
+/* ----------------------------------- */
+/* 1. Navegação (Header) */
+/* ----------------------------------- */
+
+.navegacao {
+    background-color: var(--cor-secundaria);
+    padding: 1rem 0;
+    position: sticky; /* Fica fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    gap: 2rem;
+}
+
+.navegacao a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.navegacao a:hover {
+    color: var(--cor-principal);
+}
+
+/* ----------------------------------- */
+/* 2. Cabeçalho / Seção Início */
+/* ----------------------------------- */
+
+.cabecalho {
+    padding: 6rem 1rem;
+    text-align: center;
+    background: var(--cor-branco); /* Fundo branco para destaque */
+}
+
+.cabecalho div {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Transforma a imagem em círculo */
+    object-fit: cover;
+    border: 5px solid var(--cor-principal); /* Borda de destaque */
+    margin-bottom: 1.5rem;
+}
+
+.cabecalho h1 {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.cabecalho strong {
+    color: var(--cor-secundaria);
+}
+
+/* ----------------------------------- */
+/* 3. Seções Gerais (Sobre, Projetos, Contato) */
+/* ----------------------------------- */
+
+section {
+    padding: 4rem 1rem;
+    min-height: 50vh;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--cor-secundaria);
+    border-bottom: 3px solid var(--cor-principal);
+    display: inline-block   
+ 
+}
+
+.campo-form {
+    width: 500px;
+    padding: 20px;
+    margin-bottom: 10px;
+    
+}
+
+.text-form {
+    resize: vertical;
+    padding: 20px;
+    min-height: 50px; 
+    width: 500px;
+    
+}
+
+/* O botão de envio (se você o tiver) também pode ser aumentado para manter a consistência: */
+.botao-enviar {
+    /* ... (outras regras) */
+    padding: 1.25rem 2rem; /* Ajustado para combinar com os campos */
+    font-size: 1.1rem;
+    /* ... (outras regras) */
+}
