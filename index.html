@@ -1,81 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de João Gabriel da Silva Mesquita, desenvolvedor front-end.">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>João Gabriel | Portfólio</title>
 </head>
 
 <body>
-    <nav class="navegacao">
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+        <a class="logo" href="#inicio">JG</a>
         <ul>
-            <li>
-                <a href="#inicio">inicio</a>
-            </li>
-            <li>
-                <a href="#sobre">sobre</a>
-            </li>
-            <li>
-                <a href="#projetos">projetos</a>
-            </li>
-            <li>
-                <a href="#contato">contato</a>
-            </li>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <div>
-            <img src="WhatsApp Image 2025-11-18 at 11.01.44.jpeg" class="img" alt="foto do joao">
-            <h1>João Gabriel da silva</h1>
-            <p>Estudante em Analise e desenvolvimento de sistema <strong>Desenvolvedor Front-end</strong></p>
+        <div class="hero-conteudo animar-entrada">
+            <img src="WhatsApp Image 2025-11-18 at 11.01.44.jpeg" class="foto-perfil" alt="Foto de João Gabriel">
+            <span class="tag">Front-end Developer</span>
+            <h1>João Gabriel da Silva Mesquita</h1>
+            <p>
+                Estudante de Análise e Desenvolvimento de Sistemas criando interfaces modernas,
+                responsivas e com foco em uma boa experiência para o usuário.
+            </p>
+
+            <div class="acoes-hero" aria-label="Links sociais">
+                <a class="botao-social linkedin" href="https://www.linkedin.com/in/jo%C3%A3o-gabriel-da-silva-mesquita-516761210/" target="_blank" rel="noopener noreferrer" aria-label="Acessar LinkedIn de João Gabriel">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13Zm1.78 13.02H3.54V9H7.1v11.45Z" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a class="botao-social github" href="https://github.com/Joaosilva2020" target="_blank" rel="noopener noreferrer" aria-label="Acessar GitHub de João Gabriel">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.16c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.11-.12-.3-.52-1.48.11-3.07 0 0 .98-.31 3.16 1.19A10.94 10.94 0 0 1 12 5.9c.98 0 1.96.13 2.88.39 2.18-1.5 3.15-1.19 3.15-1.19.64 1.59.24 2.77.12 3.07.75.82 1.19 1.85 1.19 3.11 0 4.46-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.18c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
         </div>
     </main>
 
-    <section id="sobre" class="sobre">
-        <h class="sobretitulo">sobre mim</h2>
-            <div class="sobrecaixa">
-                <p class="sobreparagrafo">Olá! Atualmente estou estudando Análise e Desenvolvimento de Sistemas, com
-                    foco em me tornar um desenvolvedor Front-end. quero ser o melhor na minha area,e estou sempre
-                    buscando aprender novas tecnologias e aprimorar minhas habilidades. Estou animado para contribuir
-                    com projetos desafiadores e crescer profissionalmente na área de desenvolvimento web.
+    <section id="sobre" class="secao sobre revelar">
+        <div class="conteudo-secao">
+            <span class="subtitulo">Quem sou</span>
+            <h2>Sobre mim</h2>
+            <div class="painel">
+                <p>
+                    Olá! Atualmente estudo Análise e Desenvolvimento de Sistemas, com foco em me tornar
+                    desenvolvedor front-end. Quero evoluir constantemente, aprender novas tecnologias e
+                    construir projetos cada vez mais profissionais, bonitos e funcionais.
                 </p>
             </div>
+        </div>
     </section>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetotitulo">meus projetos</h2>
-        <div class="projetocaixa">
-            <div class="projeto1">
-                <h3>Projeto 1: Site de Portfólio Pessoal</h3>
-                <p>Descrição: Um site responsivo para exibir meus projetos, habilidades e informações de contato.</p>
+    <section id="projetos" class="secao projetos revelar">
+        <div class="conteudo-secao">
+            <span class="subtitulo">Portfólio</span>
+            <h2>Meus projetos</h2>
+            <div class="grade-projetos">
+                <article class="card-projeto">
+                    <span class="numero-projeto">01</span>
+                    <h3>Site de Portfólio Pessoal</h3>
+                    <p>Site responsivo para exibir meus projetos, habilidades, informações de contato e presença profissional online.</p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
             </div>
-
-           <section id="contato" class="contato">
-    <h2 class="contatotitulo">contatos</h2>
-    
-    <div class="formulario-contato" id="formulario-whatsapp">
-        
-        <div class="grupo-inputs-curtos">
-            <div class="grupo-form" style="width: 100%;">
-                <input placeholder="Seu Nome Completo" class="campo-form" type="text" id="nome-contato" required>
-            </div>
-            </div>
-        
-        <div class="grupo-form">
-            <textarea class="text-form" placeholder="Digite sua mensagem detalhada aqui..." id="mensagem-texto"></textarea>
         </div>
-        
-        <button type="button" class="botao-enviar" id="enviar-whatsapp">
-            Enviar Mensagem via WhatsApp
-        </button>
-        
-    </div>
-</section>
+    </section>
 
+    <section id="contato" class="secao contato revelar">
+        <div class="conteudo-secao">
+            <span class="subtitulo">Vamos conversar</span>
+            <h2>Contato</h2>
+            <form class="formulario-contato" id="formulario-whatsapp">
+                <div class="grupo-form">
+                    <label for="nome-contato">Nome completo</label>
+                    <input placeholder="Seu nome completo" class="campo-form" type="text" id="nome-contato" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensagem-texto">Mensagem</label>
+                    <textarea class="text-form" placeholder="Digite sua mensagem aqui..." id="mensagem-texto" required></textarea>
+                </div>
+
+                <button type="submit" class="botao-enviar" id="enviar-whatsapp">
+                    Enviar mensagem via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
