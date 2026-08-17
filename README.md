@@ -24,7 +24,7 @@ Este portfólio demonstra minhas habilidades em **Front-end puro** (HTML, CSS e 
 
 Você pode acessar a versão pública do portfólio no link abaixo (se você já subiu para o GitHub Pages):
 
-➡️ **[Link para o meu Portfólio Online](https://joaosilva2020.github.io/meu-portfolio/)**
+➡️ **[Link para o meu Portfólio Online](https://main.dkz5p1rp7nnuo.amplifyapp.com/)**
 
 ### 💻 2. Localmente
 
